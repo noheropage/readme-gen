@@ -29,7 +29,7 @@ const questions = () =>
         {
             type: 'list',
             name: 'license',
-            choices: ['MIT', 'GPL', 'Apache', 'BSD', 'LGPL', 'AGPL'],
+            choices: ['MIT', 'GPL', 'Apache', 'BSD', 'LGPL', 'AGPL', 'Other'],
         },
         {
             type: 'input',
@@ -39,7 +39,7 @@ const questions = () =>
         {
             type: 'input',
             name: 'tests',
-            message: 'Enter testing instructions: ',
+            message: 'Enter testing instructions or examples: ',
         },
         {
             type: 'input',

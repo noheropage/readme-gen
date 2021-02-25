@@ -1,4 +1,3 @@
-const inputs = require('../index')
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
@@ -21,7 +20,7 @@ function renderLicenseLink(license) {
     default:
       return '';
     case 'MIT':
-      return `https://opensource.org/licenses/MIT`
+      return 'https://opensource.org/licenses/MIT'
     case 'GPL':
       return `https://www.gnu.org/licenses/gpl-3.0`
   }
@@ -35,15 +34,28 @@ function renderLicenseSection(license) {
       return '';
     case 'MIT':
       return `## License ${renderLicenseBadge(license)}
-          ${renderLicenseLink(license)}`
+    [${renderLicenseLink(license)}]`
   }
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  return `# ${data.title.toUpperCase()}
 
-  ## Discription
+  ### Table of Contents
+  [Discription](#description)
+
+  [Installation](#installation)
+
+  [Usage](#usage)
+
+  [Contributing](#contributing)
+
+  [Testing](#testing)
+
+  [Questions](#questions)
+
+  ## Description
     ${data.description}
 
   ## Installation

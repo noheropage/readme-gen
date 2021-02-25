@@ -60,14 +60,19 @@ const questions = () =>
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    const readme = generateMarkdown();
+    const completedMarkdown = generateMarkdown(data);
+    fs.writeFileSync(`${fileName}`, completedMarkdown);
+    console.log(`Successfully created ${fileName}`);
 }
 
 // TODO: Create a function to initialize app
 function init() {
     questions().then((inputs) => {
         try {
-            const readMe = makeReadMe(inputs);
+            const fileName = `${inputs.title.toLowerCase().split(' ').join('')}.md`;
+            writeToFile(fileName, inputs);
+        } catch (error) {
+            console.log(error);
         }
     });
 }

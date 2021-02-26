@@ -71,19 +71,19 @@ function generateMarkdown(data) {
   [License](#license)
 
   ## Description
-    ${data.description}
+  ${data.description}
 
   ## Installation
-    ${data.installation}
+  ${data.installation}
 
   ## Usage
-    ${data.usage}
+  ${data.usage}
 
   ## Contributing
-    ${data.contributing}
+  ${data.contributing}
 
   ## Testing
-    ${data.tests}
+  ${data.tests}
 
   ## Questions
   Don't hesitate to reach out!

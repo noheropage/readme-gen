@@ -11,7 +11,7 @@ Requires node.js to run index.js in the command line. Also will require running 
 
 ## Usage
 Start by type 'node index.js' in the command line. Answer the prompts given and at the end the system will confirm the program was created by saying "Successfully created \<filename>.md" You should have generated a new README file with the project title as its filename. If there is an error, run the application again with the same filename and the application will override the previous version. 
-<!-- Enter video/screenshots here -->
 
-## Contributions
+#### Youtube Video Link:
+[![Running the generator in the command line on VS Code](https://img.youtube.com/vi/RxkXWY0G2I4/0.jpg)](https://www.youtube.com/watch?v=RxkXWY0G2I4 "README Generator")
 

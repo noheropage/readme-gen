@@ -86,9 +86,11 @@ function generateMarkdown(data) {
     ${data.tests}
 
   ## Questions
-    Don't hesitate to reach out!
-    GitHub: [https://github.com/${data.username}] 
-    Email: [mailto]<mailto:${data.email}> 
+  Don't hesitate to reach out!
+
+  GitHub: [${data.username}](https://github.com/${data.username}) 
+
+  Email: <mailto:${data.email}> 
 
   ${renderLicenseSection(data.license)}
     `;

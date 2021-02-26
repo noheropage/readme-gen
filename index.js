@@ -53,7 +53,7 @@ const questions = () =>
         },
     ]);
 
-// function to write README file
+// function to write README file with input data passed into generateMarkdown.js
 function writeToFile(fileName, data) {
     const completedMarkdown = generateMarkdown(data);
     fs.writeFileSync(`${fileName}`, completedMarkdown);
@@ -62,14 +62,14 @@ function writeToFile(fileName, data) {
 
 // function to initialize app
 function init() {
-    questions().then((inputs) => {
-        try {
-            const fileName = `${inputs.title.toLowerCase().split(' ').join('')}.md`;
+    try {
+        questions().then((inputs) => {
+            const fileName = `${inputs.title.toLowerCase().split(' ').join('-')}.md`;
             writeToFile(fileName, inputs);
-        } catch (error) {
-            console.log(error);
-        }
-    });
+        });
+    } catch (error) {
+        console.log(error);
+    }
 }
 
 // Function call to initialize app
